@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Shopping Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #ff4500;
+        }
+        .item {
+            background-color: #fffacd;
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #90ee90;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Kids Shop!</h1>
+    <p>Click the button to add an item to the cart.</p>
+
+    <div class="item">
+        <p>🎈 Balloon - ₹50</p>
+        <button onclick="addToCart('Balloon', 50)">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🧸 Teddy Bear - ₹200</p>
+        <button onclick="addToCart('Teddy Bear', 200)">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <p>🚗 Toy Car - ₹150</p>
+        <button onclick="addToCart('Toy Car', 150)">Add to Cart</button>
+    </div>
+<div class="item">
+<p>🍅 Tomato - ₹40</p>
+<button onclick="addToCart('Tomato',40)">Add to Cart</button>
+</div>
+<div class="item">
+<p>👕 Shirt - ₹500</p>
+<button onclick="addToCart('Shirt',500)">Add to Cart</button>
+</div>
+<div class="item">
+
+<p> 👟19000₹</p>
+<button onclick="addToCart('Shoes',19000)">Add to Cart</button>
+</div>
+ <div class="cart">
+        <h3>Shopping Cart</h3>
+        <p id="cartList">Cart is empty</p>
+        <h3>Total: ₹<span id="totalAmount">0</span></h3>
+    </div>
+
+    <script>
+        let totalAmount = 0;
+
+        function addToCart(item, price) {
+            let cart = document.getElementById("cartList");
+            let total = document.getElementById("totalAmount");
+
+            // Update cart items
+            if (cart.innerHTML === "Cart is empty") {
+                cart.innerHTML = item;
+            } else {
+                cart.innerHTML += ", " + item;
+            }
+
+            // Update total amount
+            totalAmount += price;
+            total.innerHTML = totalAmount;
+        }
+    </script>
+
+</body>
+</html>

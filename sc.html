@@ -1,0 +1,89 @@
+
+<html>
+<head>
+<title>Kids Shopping Page</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: peachpuff;
+}
+h1 {
+color: blue;
+}
+.item {
+background-color: cyan;
+border: 2px solid #333;
+padding: 10px;
+margin: 10px;
+display: inline-block;
+}
+.cart {
+margin-top: 20px;
+padding: 10px;
+background-color:black;
+display: inline-block;
+border-radius: 10px;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to Target !!</h1>
+<p>Click the button to add an item to the cart.</p>
+<div class="item">
+<p>🎈 Balloon - ₹5</p>
+<button onclick="addToCart('Balloon')">Add to Cart</button>
+</div>
+<div class="item">
+<p>🧸 Teddy Bear - ₹200</p>
+<button onclick="addToCart('Teddy Bear')">Add to Cart</button>
+</div>
+<div class="item">
+<p>🚗 Toy Car - ₹1k</p>
+<button onclick="addToCart('Toy Car')">Add to Cart</button>
+</div>
+<div class="item">
+<p>🍅 Tomato - ₹40</p>
+<button onclick="addToCart('Tomato')">Add to Cart</button>
+</div>
+<div class="item">
+<p> Gun - ₹20 </p>
+<button onclick="addToCart('Gun')">Add to Cart</button>
+</div>
+<div class="item">
+<p> 👟19k₹</p>
+<button onclick="addToCart('Shoes')">Add to Cart</button>
+</div>
+<div class="item">
+<p> ⚽︎ Football - ₹2</p>
+<button onclick="addToCart('Football')">Add to Cart</button>
+</div>
+<div class="item">
+<p>👕 Shirt - ₹500</p>
+<button onclick="addToCart('Shirt')">Add to Cart</button>
+</div>
+<div class="item">
+<p> 🧦 Socks- ₹200</p>
+<button onclick="addToCart('Socks')">Add to Cart</button>
+</div>
+<div class="item">
+<p>🏎️  Car- ₹3CR</p>
+<button onclick="addToCart('Car')">Add to Cart</button>
+</div>
+
+<div class="cart">
+<h3>Shopping Cart</h3>
+<p id="cartList">Cart is empty</p>
+</div>
+<script>
+function addToCart(item) {
+ let cart = document.getElementById("cartList");
+if (cart.innerHTML === "Cart is empty") {
+cart.innerHTML = item;
+} else {
+cart.innerHTML += ", " + item;
+}
+}
+</script>
+</body>
+</html>

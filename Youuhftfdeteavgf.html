@@ -1,0 +1,16 @@
+<html>
+<head><tittle>OoooLuLuLuLu</tittle></head>
+<h2>PROG2</h2>
+<p>Enter an Integer</p>
+<input type="number" id="num4">
+<button onclick="checkPositiveNegetive()">Check +/-</button>
+<p id="result3"></p>
+<script>
+function checkPositiveNegetive() {
+let num = parseInt(document.getElementById("num4").value);
+document.getElementById("result3").innerHTML = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+}
+</script>
+</body>
+</html>
+
